@@ -14,21 +14,11 @@ env.port = '22222'
 env.user = 'root'
 env.hosts = ['6zu4']
 env.webserver = '/opt/webserver/buildout.webserver'
-env.code_root = '/opt/sites/plonesite/buildout.plonesite'
+env.code_root = '/opt/sites/newport/buildout.newport'
 env.local_root = '/Users/anjaradtke/vw-devel/current/newport/buildout.newport'
 env.sitename = 'plonesite'
 env.code_user = 'root'
 env.prod_user = 'www'
-
-
-@task
-def bo_conf():
-    #t = cuisine.file_local_read('packages.cfg')
-    filename = '%s/packages.cfg' % env.local_root
-    with open(filename, 'r+a') as f:
-        read_data = f.read()
-        # config = ConfigParser.ConfigParser()
-        print read_data
 
 
 def ls():
