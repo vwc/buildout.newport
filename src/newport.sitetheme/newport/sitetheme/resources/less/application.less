@@ -1,0 +1,177 @@
+// Custom application specific styles
+//--------------------------------------
+
+
+// Bootstrap overrides
+// ------------------
+
+@font-size-base:          16px;
+@line-height-base:        25px;
+@orange: #FB9701;
+
+body {
+    //background: #f5f5f5;
+    background: #fff;
+}
+
+// Example for providing a data image via stylesheet
+// Add this class to any element to provide some extend of visual noise
+.make-some-noise {
+    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQAQMAAAC032DuAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMACHhIRQoAAAN7SURBVCiRAXADj/wAAkQJcM1mLQnAjAAb4sEhBjkWRBpWAIKF/FlkjVDJKKgA0KxA5QFOFWKpQgBG5PjjxiiDVJtnAHD5UwQVQstA7u8AOAYIMPmwiKga2gBooyeQA+jdVxiNABAIYGkr3lgTDBsAXQBAcGFmEGFEXQAwUgJEk6SsEMjDAApsetkgJK9PKJQAfDApaQUONGIDEgAKpcRsXsojEuY1ACYN4xSjdyGRVLcAsCBxpEiAUIkwYgBGLNoX24Yj9iJRAGMGy8gopJFOQvkAEZgtO9HAJC+9WACKQEJCwJGqpRoIAKYmUxdgMdl89AIApMRLQ/2pQLVbBQBDTLPsYJCDUEjoAHzhwoxoCKB4DAgAAN6ASuQFERMyvQCzWAJoFpkGjFsGAGLQnTrBTH4zIKIAFGUFG3UALzJDiwCmsCEwxUDwgFgIAFi/LtLBIAUJNBEAE4TENLhU8TjOCgAtAYILmwxnJrBoAAhNyenNNwViQFkANAFOhHKUo84QUAD0DRiji8DNOMJqADHrmeMWgFAgRrQAmIm9A9EhEGSBSgAulqWIGymRfxpwAH0DAAQSAnKWgdQASeJNibLEQzNOZwBzyCNrQnAEFoQoAAxMomBElggSqkgAAwFV5OAQZJ28ZwCCFaFCjSWxAObRAB8AJgRUj4BKIygApBGgk0MCkUMxFADVwIDCBY+OdMWgAG1xdOROdABshSMACAFX0QKD4hVCgwB2Mh6ZnAco8kNpAHsI4C8RY9CIiewAqyAZg6UNgAz7mgBkAxCbD25svIhqACgzbQNxciGqYNQAkARc2iVSMJ2lZADNJknADN80kC5jAOOUE5OONKUAsA0ARQLA1ABqDAEQCACIlnFgRPrqeUQyAKkAOV/GAUgi1RAAeAIX22Pv4uTlJABvEiKL1OBOaIWIAEsoNPRyRGQcMM0AQmzLIn0jGg0gNAAqsAQfVSb/NB1UAAi0AywKJQUIjCoA85ksYPNtqJExcQAYgoDzhYBwbWAdAKsgPswqlOqHbJMAUQlvpxLB1UzAGABpyxQ0mCs81wNXACHgmQEVxF1T9FUA8jrxkbDXWRJhoQBgoSwOksFRSSibACNkCSFowJxiMBYA4ek2cwRDk1DM8wCQCsQXTxHsamgRAEGGIlVQmcLwKhUAG+wigJjtKYW0HQC0OKRNEGFqXIOAbRpCReUGtgIAAAAASUVORK5CYII=);
+}
+
+// Use Blokk font as a lorem ipsum replacement
+.wireframed {
+  font-family: 'redactedregular', 'BLOKKNeue-Regular';
+  font-size: @line-height-base;
+  color: @gray;
+}
+
+// Example styles for a custom editbar override of the basic
+// twitter bootstarp navbar to make the edit bar look like a
+// browser toolbar
+body > header {
+    background-color: @orange;
+//    margin-bottom: @line-height-base;
+    border-bottom: 10px solid @orange;
+    #toolbar +nav {
+        margin-top: @navbar-height;
+        .navbar-inner {
+            border-radius:0px;
+        }
+    }
+    // Active nav items
+    #main-nav .selected > a,
+    #main-nav .selected > a:hover,
+    #main-nav .selected > a:focus {
+      color: #fff;
+      text-decoration: none;
+      margin: 5px;
+//      -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
+//         -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
+//              box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
+    }
+}
+
+#topbar {
+    nav.navbar {
+        background-color: #000;
+        a {
+            letter-spacing: 0.25em;
+            margin: 5px;
+            color: @orange;
+            font-size: 1.5em;
+            font-weight: bolder;
+        }
+        a:hover {
+            color: #fff;
+        }
+        a:active {
+            color: #fff;
+        }
+        a.navbar-brand {
+            margin-left: 20px;
+        }
+    }  
+}
+#header-wrapper {
+    background: url(../img/header_bg.png) 0 0 no-repeat transparent;
+    background-size: 100%;
+    #logo-wrapper {
+        #logo {
+            margin-top: 13.5%;
+            .size(100%, 50px);
+            //background-size: 100%;
+            display: block;
+            background: url(../img/logo.png) 0 0 no-repeat transparent;
+            text-indent: -3000px;
+            overflow:hidden;
+        }        
+    }
+
+}
+#content-wrapper {
+    background: #fff;
+    #sidebar-info {
+        padding: 0px 50px 50px 50px;
+        h3 {
+            color: #000;
+            padding-bottom: 5px;
+            border-bottom: 5px solid @orange;            
+        }
+    }
+    #content {
+        padding: 30px 50px 50px 50px;
+        h1.documentFirstHeading {
+            color: #000;
+            padding-bottom: 5px;
+            border-bottom: 5px solid @orange;
+        }
+
+    }
+
+    #content-home {
+        padding-top: 50px;
+        h2 {
+            color: #000;
+            padding-bottom: 5px;
+            border-bottom: 5px solid @orange;
+        }
+        p {
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+
+// Some eample styles for portlets
+
+.portlet {
+  .portletHeader {
+    font-size: @font-size-base * 1.5;
+    padding: @padding-large;
+    border-bottom: 1px solid @grayLight;
+  }
+  .portletItem {
+    padding: @padding-large;
+  }
+  .portletFooter {
+    padding: @padding-large;
+    font-size: @font-size-small;
+  }
+}
+
+@media(max-width: 980px) {
+    #topbar {
+        nav.navbar a {
+            letter-spacing: normal;
+        }
+    }    
+}
+// Example styles for listings (e.g. folder summary view)
+
+.tileItem {
+  .media();
+  .tileHeadline {
+    .media-heading();
+  }
+}
+
+
+// Example styles for a HMTL5 based site footer
+body > footer {
+    background-color: #000;
+    color: @orange;
+    a {
+        color: #fff;
+    }
+    //margin-top: @line-height-base;
+    padding: @line-height-base 0;
+    border-top: 20px solid @orange;
+    p {
+        margin: 0;
+    }
+}
