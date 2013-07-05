@@ -14,10 +14,9 @@ env.port = '22222'
 env.user = 'root'
 env.hosts = ['6zu4']
 env.webserver = '/opt/webserver/buildout.webserver'
-#env.code_root = '/opt/sites/plonesite/buildout.plonesite'
-env.code_root = '/opt/sites/newport/buildout.newport'
+env.code_root = '/opt/sites/plonesite/buildout.plonesite'
 env.local_root = '/Users/anjaradtke/vw-devel/current/newport/buildout.newport'
-env.sitename = 'plonesite'
+env.sitename = 'newport'
 env.code_user = 'root'
 env.prod_user = 'www'
 
