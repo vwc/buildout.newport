@@ -1,11 +1,6 @@
-from fabric.api import cd
-from fabric.api import env
-from fabric.api import local
-from fabric.api import run
-from fabric.api import sudo
 from fabric.api import task
+from fabric.api import env
 
-from ade25.fabfiles import server
 from ade25.fabfiles import project
 
 env.use_ssh_config = True
@@ -22,33 +17,13 @@ env.prod_user = 'www'
 
 
 @task
-def bo_conf():
-    #t = cuisine.file_local_read('packages.cfg')
-    filename = '%s/packages.cfg' % env.local_root
-    with open(filename, 'r+a') as f:
-        read_data = f.read()
-        # config = ConfigParser.ConfigParser()
-        print read_data
-
-
-def ls():
-    """ Low level configuration test """
-    with cd(env.code_root):
-        run('ls')
-
-
-def supervisorctl(*cmd):
-    """Runs an arbitrary supervisorctl command."""
-    with cd(env.webserver):
-        run('bin/supervisorctl ' + ' '.join(cmd))
-
-
 def deploy():
     """ Deploy current master to production server """
     project.site.update()
-    project.site.estart()
+    project.site.restart()
 
 
+@task
 def deploy_full():
     """ Deploy current master to production and run buildout """
     project.site.update()
@@ -56,8 +31,15 @@ def deploy_full():
     project.site.restart()
 
 
+@task
 def rebuild():
     """ Deploy current master and run full buildout """
     project.site.update()
     project.site.build_full()
     project.site.restart()
+
+
+@task
+def get_data():
+    """ Copy live database for local development """
+    project.db.download_data()
