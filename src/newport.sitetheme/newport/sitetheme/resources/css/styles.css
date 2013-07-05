@@ -6090,6 +6090,9 @@ body > header #main-nav .selected > a:focus {
 #content-wrapper {
   background: #fff;
 }
+#content-wrapper a {
+  color: #fb9701;
+}
 #content-wrapper #sidebar-info {
   padding: 0px 50px 50px 50px;
 }
@@ -6100,6 +6103,9 @@ body > header #main-nav .selected > a:focus {
 }
 #content-wrapper #content {
   padding: 30px 50px 50px 50px;
+}
+#content-wrapper #content a {
+  color: #fb9701;
 }
 #content-wrapper #content h1.documentFirstHeading {
   color: #000;
