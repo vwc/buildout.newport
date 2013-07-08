@@ -6112,9 +6112,6 @@ body > header #main-nav .selected > a:focus {
   padding-bottom: 5px;
   border-bottom: 5px solid #fb9701;
 }
-#content-wrapper #content-home {
-  padding-top: 50px;
-}
 #content-wrapper #content-home h2 {
   color: #000;
   padding-bottom: 5px;
