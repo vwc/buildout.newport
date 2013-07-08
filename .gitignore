@@ -13,6 +13,7 @@ eggs
 fake-eggs
 parts
 dist
+<<<<<<< HEAD
 .install.cfg
 .installed.cfg
 .mr.developer.cfg
