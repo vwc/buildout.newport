@@ -6097,9 +6097,8 @@ body > header #main-nav .selected > a:focus {
   padding: 0px 50px 50px 50px;
 }
 #content-wrapper #sidebar-info h3 {
-  color: #000;
+  color: #fb9701;
   padding-bottom: 5px;
-  border-bottom: 5px solid #fb9701;
 }
 #content-wrapper #content {
   padding: 30px 50px 50px 50px;
