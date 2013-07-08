@@ -6074,6 +6074,12 @@ body > header #main-nav .selected > a:focus {
 #topbar nav.navbar a.navbar-brand {
   margin-left: 20px;
 }
+#topbar nav.navbar a.navbar-brand:hover {
+  color: #fff;
+}
+#topbar nav.navbar a.navbar-brand:active {
+  color: #fff;
+}
 #header-wrapper {
   background: url(../img/header_bg.png) 0 0 no-repeat transparent;
   background-size: 100%;
@@ -6111,6 +6117,9 @@ body > header #main-nav .selected > a:focus {
   padding-bottom: 5px;
   border-bottom: 5px solid #fb9701;
 }
+#content-wrapper #content h3 {
+  color: #fb9701;
+}
 #content-wrapper #content-home h2 {
   color: #000;
   padding-bottom: 5px;
@@ -6118,6 +6127,9 @@ body > header #main-nav .selected > a:focus {
 }
 #content-wrapper #content-home p {
   text-align: center;
+}
+#content-wrapper #content-home h3 {
+  color: #fb9701;
 }
 .portlet .portletHeader {
   font-size: 24px;
