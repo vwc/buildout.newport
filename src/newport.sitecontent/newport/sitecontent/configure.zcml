@@ -19,7 +19,7 @@
        in Plone -->
   <genericsetup:registerProfile
       name="default"
-      title="deluca.sitecontent"
+      title="newport.sitecontent"
       directory="profiles/default"
       description="Installs the newport.sitecontent package"
       provides="Products.GenericSetup.interfaces.EXTENSION"

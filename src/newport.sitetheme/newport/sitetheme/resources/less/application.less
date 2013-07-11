@@ -6,25 +6,11 @@
 // ------------------
 
 @font-size-base:          16px;
-@line-height-base:        25px;
 @orange: #FB9701;
 
 body {
     //background: #f5f5f5;
     background: #fff;
-}
-
-// Example for providing a data image via stylesheet
-// Add this class to any element to provide some extend of visual noise
-.make-some-noise {
-    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQAQMAAAC032DuAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMACHhIRQoAAAN7SURBVCiRAXADj/wAAkQJcM1mLQnAjAAb4sEhBjkWRBpWAIKF/FlkjVDJKKgA0KxA5QFOFWKpQgBG5PjjxiiDVJtnAHD5UwQVQstA7u8AOAYIMPmwiKga2gBooyeQA+jdVxiNABAIYGkr3lgTDBsAXQBAcGFmEGFEXQAwUgJEk6SsEMjDAApsetkgJK9PKJQAfDApaQUONGIDEgAKpcRsXsojEuY1ACYN4xSjdyGRVLcAsCBxpEiAUIkwYgBGLNoX24Yj9iJRAGMGy8gopJFOQvkAEZgtO9HAJC+9WACKQEJCwJGqpRoIAKYmUxdgMdl89AIApMRLQ/2pQLVbBQBDTLPsYJCDUEjoAHzhwoxoCKB4DAgAAN6ASuQFERMyvQCzWAJoFpkGjFsGAGLQnTrBTH4zIKIAFGUFG3UALzJDiwCmsCEwxUDwgFgIAFi/LtLBIAUJNBEAE4TENLhU8TjOCgAtAYILmwxnJrBoAAhNyenNNwViQFkANAFOhHKUo84QUAD0DRiji8DNOMJqADHrmeMWgFAgRrQAmIm9A9EhEGSBSgAulqWIGymRfxpwAH0DAAQSAnKWgdQASeJNibLEQzNOZwBzyCNrQnAEFoQoAAxMomBElggSqkgAAwFV5OAQZJ28ZwCCFaFCjSWxAObRAB8AJgRUj4BKIygApBGgk0MCkUMxFADVwIDCBY+OdMWgAG1xdOROdABshSMACAFX0QKD4hVCgwB2Mh6ZnAco8kNpAHsI4C8RY9CIiewAqyAZg6UNgAz7mgBkAxCbD25svIhqACgzbQNxciGqYNQAkARc2iVSMJ2lZADNJknADN80kC5jAOOUE5OONKUAsA0ARQLA1ABqDAEQCACIlnFgRPrqeUQyAKkAOV/GAUgi1RAAeAIX22Pv4uTlJABvEiKL1OBOaIWIAEsoNPRyRGQcMM0AQmzLIn0jGg0gNAAqsAQfVSb/NB1UAAi0AywKJQUIjCoA85ksYPNtqJExcQAYgoDzhYBwbWAdAKsgPswqlOqHbJMAUQlvpxLB1UzAGABpyxQ0mCs81wNXACHgmQEVxF1T9FUA8jrxkbDXWRJhoQBgoSwOksFRSSibACNkCSFowJxiMBYA4ek2cwRDk1DM8wCQCsQXTxHsamgRAEGGIlVQmcLwKhUAG+wigJjtKYW0HQC0OKRNEGFqXIOAbRpCReUGtgIAAAAASUVORK5CYII=);
-}
-
-// Use Blokk font as a lorem ipsum replacement
-.wireframed {
-  font-family: 'redactedregular', 'BLOKKNeue-Regular';
-  font-size: @line-height-base;
-  color: @gray;
 }
 
 // Example styles for a custom editbar override of the basic
@@ -34,12 +20,6 @@ body > header {
     background-color: @orange;
 //    margin-bottom: @line-height-base;
     border-bottom: 10px solid @orange;
-    #toolbar +nav {
-        margin-top: @navbar-height;
-        .navbar-inner {
-            border-radius:0px;
-        }
-    }
     // Active nav items
     #main-nav .selected > a,
     #main-nav .selected > a:hover,
@@ -79,6 +59,9 @@ body > header {
             color: #fff;
         }
     }  
+}
+#topbar + #toolbar {
+    padding-top: @navbar-height;
 }
 #header-wrapper {
     background: url(../img/header_bg.png) 0 0 no-repeat transparent;
@@ -149,14 +132,14 @@ body > header {
 .portlet {
   .portletHeader {
     font-size: @font-size-base * 1.5;
-    padding: @padding-large;
-    border-bottom: 1px solid @grayLight;
+    padding: @padding-large-horizontal;
+    border-bottom: 1px solid @gray-light;
   }
   .portletItem {
-    padding: @padding-large;
+    padding: @padding-large-horizontal;
   }
   .portletFooter {
-    padding: @padding-large;
+    padding: @padding-large-horizontal;
     font-size: @font-size-small;
   }
 }
