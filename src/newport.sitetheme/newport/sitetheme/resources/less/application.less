@@ -40,8 +40,9 @@ body > header {
             letter-spacing: 0.25em;
             margin: 5px;
             color: @orange;
-            font-size: 1.5em;
-            font-weight: bolder;
+            font-size: @font-size-base * 1.5;
+            font-weight: 500;
+            text-transform: lowercase;
         }
         a:hover {
             color: #fff;
@@ -60,8 +61,8 @@ body > header {
         }
     }  
 }
-#topbar + #toolbar {
-    padding-top: @navbar-height;
+#toolbar + #topbar {
+  margin-top: @navbar-height;
 }
 #header-wrapper {
     background: url(../img/header_bg.png) 0 0 no-repeat transparent;
