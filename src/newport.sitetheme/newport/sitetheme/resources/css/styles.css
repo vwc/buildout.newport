@@ -5389,6 +5389,8 @@ body > header #main-nav .selected > a:focus {
   margin: 0 0 5px;
 }
 body > footer {
+  padding-top: 10px;
+  padding-bottom: 15px;
   background-color: #000;
   color: #fb9701;
   padding: 1.428571429 0;
